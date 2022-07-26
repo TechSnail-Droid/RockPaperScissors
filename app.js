@@ -39,22 +39,22 @@ function makeChoice(choice){
     addOutcome(computerChoice, computerWinner)
     addOutcome(choice, playerWinner)
 
-    if (playerWinner) increaseScore(playerScore)
-    if(computerWinner) increaseScore(computerScore)
+    if (playerWinner) increaseScore(playerScore, playerRound)
+    if(computerWinner) increaseScore(computerScore, computerRound) 
 
     
 }
-function increaseScore(scoreSpan){
-scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1;
+function increaseScore(scoreSpan, roundSpan){
+    scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1;
     if (scoreSpan.innerText === '5'){
-        resetScore(scoreSpan);
+        resetScore(scoreSpan)
+        roundSpan.innerText = parseInt(roundSpan.innerText) + 1
         
     }
 }
-function resetScore(playerScore, computerScore){
+function resetScore(scoreSpan){
     playerScore.innerText = '0';
     computerScore.innerText = '0';
-    
 }
 
 function addOutcome(choice, winner){
