@@ -1,0 +1,101 @@
+body{
+    background-color: peachpuff;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header{
+    text-align: center;
+    font-size: 22px;
+    color:rgb(0, 0, 0);
+   
+    font-weight:bold;
+    animation-name: header-popin;
+    animation-iteration-count: 1;
+    animation-duration:2s;
+}
+
+@keyframes header-popin{
+    0% {opacity:0;}
+
+}
+
+.choices{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.button{
+    background: none;
+    border:none;
+    
+   
+}
+.pic{
+    width: 200px;
+    background-color: white;
+    animation-name: header-popin;
+    animation-iteration-count: 1;
+    animation-duration:3s;
+    border-radius: 10px;
+    
+}
+.spike-pic{
+    width:340px;
+    background-color: white;
+    animation-name: header-popin;
+    animation-iteration-count: 1;
+    animation-duration:3s;
+    border-radius: 10px;
+}
+.button:hover{
+    opacity: 0.9;  
+    transform: scale(1.1);
+}
+.button:active{
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
+}
+
+
+.outcome{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 40px;
+}
+.results{
+    font-size:35px
+    
+    
+}
+@keyframes slide-in{
+    from{
+        margin-left: 100%;
+        width:300%;
+    }
+    to {
+        margin-left: 7%;
+        width:100%;
+    }
+}
+.result-score{
+    font-size: 35px;
+}
+.result-choice{
+    opacity: 0.5;
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    animation-direction:normal;
+}
+.result-choice.winner{
+    opacity:1;
+
+}
+@media(max-width: 600px){
+    .main-body{
+        min-width: 540px;
+    }
+}
